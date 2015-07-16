@@ -31,5 +31,11 @@ namespace fullStackSQLExercise
             this.customerTableAdapter.Fill(this.patClothesShopDataSet.Customer);
 
         }
+
+        private void btnOpenForm2_Click(object sender, EventArgs e)
+        {
+            Form2 myForm = new Form2();
+            myForm.Show();
+        }
     }
 }

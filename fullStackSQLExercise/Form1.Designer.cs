@@ -29,63 +29,71 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label customerIDLabel;
             System.Windows.Forms.Label firstNameLabel;
             System.Windows.Forms.Label lastNameLabel;
-            this.patClothesShopDataSet = new fullStackSQLExercise.PatClothesShopDataSet();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new fullStackSQLExercise.PatClothesShopDataSetTableAdapters.CustomerTableAdapter();
-            this.tableAdapterManager = new fullStackSQLExercise.PatClothesShopDataSetTableAdapters.TableAdapterManager();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.customerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.customerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.btnOpenForm2 = new System.Windows.Forms.Button();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patClothesShopDataSet = new fullStackSQLExercise.PatClothesShopDataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerTableAdapter = new fullStackSQLExercise.PatClothesShopDataSetTableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager = new fullStackSQLExercise.PatClothesShopDataSetTableAdapters.TableAdapterManager();
             customerIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.patClothesShopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).BeginInit();
             this.customerBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patClothesShopDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // patClothesShopDataSet
+            // customerIDLabel
             // 
-            this.patClothesShopDataSet.DataSetName = "PatClothesShopDataSet";
-            this.patClothesShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            customerIDLabel.AutoSize = true;
+            customerIDLabel.Location = new System.Drawing.Point(121, 100);
+            customerIDLabel.Name = "customerIDLabel";
+            customerIDLabel.Size = new System.Drawing.Size(68, 13);
+            customerIDLabel.TabIndex = 2;
+            customerIDLabel.Text = "Customer ID:";
             // 
-            // customerBindingSource
+            // firstNameLabel
             // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.patClothesShopDataSet;
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Location = new System.Drawing.Point(129, 126);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.TabIndex = 4;
+            firstNameLabel.Text = "First Name:";
             // 
-            // customerTableAdapter
+            // lastNameLabel
             // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
-            this.tableAdapterManager.UpdateOrder = fullStackSQLExercise.PatClothesShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Location = new System.Drawing.Point(128, 152);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.TabIndex = 6;
+            lastNameLabel.Text = "Last Name:";
             // 
             // customerBindingNavigator
             // 
@@ -116,6 +124,31 @@
             this.customerBindingNavigator.Size = new System.Drawing.Size(483, 25);
             this.customerBindingNavigator.TabIndex = 0;
             this.customerBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -149,17 +182,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -167,7 +193,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -176,38 +202,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // customerBindingNavigatorSaveItem
             // 
             this.customerBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.customerBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("customerBindingNavigatorSaveItem.Image")));
             this.customerBindingNavigatorSaveItem.Name = "customerBindingNavigatorSaveItem";
-            this.customerBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.customerBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.customerBindingNavigatorSaveItem.Text = "Save Data";
             this.customerBindingNavigatorSaveItem.Click += new System.EventHandler(this.customerBindingNavigatorSaveItem_Click);
             // 
@@ -224,6 +232,50 @@
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.Size = new System.Drawing.Size(451, 44);
             this.customerDataGridView.TabIndex = 1;
+            // 
+            // customerIDTextBox
+            // 
+            this.customerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CustomerID", true));
+            this.customerIDTextBox.Location = new System.Drawing.Point(195, 97);
+            this.customerIDTextBox.Name = "customerIDTextBox";
+            this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerIDTextBox.TabIndex = 3;
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "FirstName", true));
+            this.firstNameTextBox.Location = new System.Drawing.Point(195, 123);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.firstNameTextBox.TabIndex = 5;
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "LastName", true));
+            this.lastNameTextBox.Location = new System.Drawing.Point(195, 149);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.lastNameTextBox.TabIndex = 7;
+            // 
+            // btnOpenForm2
+            // 
+            this.btnOpenForm2.Location = new System.Drawing.Point(102, 249);
+            this.btnOpenForm2.Name = "btnOpenForm2";
+            this.btnOpenForm2.Size = new System.Drawing.Size(244, 23);
+            this.btnOpenForm2.TabIndex = 8;
+            this.btnOpenForm2.Text = "Not even my final form!";
+            this.btnOpenForm2.UseVisualStyleBackColor = true;
+            this.btnOpenForm2.Click += new System.EventHandler(this.btnOpenForm2_Click);
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.patClothesShopDataSet;
+            // 
+            // patClothesShopDataSet
+            // 
+            this.patClothesShopDataSet.DataSetName = "PatClothesShopDataSet";
+            this.patClothesShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -244,62 +296,22 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "LastName";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // customerIDLabel
+            // customerTableAdapter
             // 
-            customerIDLabel.AutoSize = true;
-            customerIDLabel.Location = new System.Drawing.Point(121, 100);
-            customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new System.Drawing.Size(68, 13);
-            customerIDLabel.TabIndex = 2;
-            customerIDLabel.Text = "Customer ID:";
+            this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // customerIDTextBox
+            // tableAdapterManager
             // 
-            this.customerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CustomerID", true));
-            this.customerIDTextBox.Location = new System.Drawing.Point(195, 97);
-            this.customerIDTextBox.Name = "customerIDTextBox";
-            this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.customerIDTextBox.TabIndex = 3;
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(129, 126);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(60, 13);
-            firstNameLabel.TabIndex = 4;
-            firstNameLabel.Text = "First Name:";
-            // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "FirstName", true));
-            this.firstNameTextBox.Location = new System.Drawing.Point(195, 123);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.firstNameTextBox.TabIndex = 5;
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(128, 152);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 13);
-            lastNameLabel.TabIndex = 6;
-            lastNameLabel.Text = "Last Name:";
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "LastName", true));
-            this.lastNameTextBox.Location = new System.Drawing.Point(195, 149);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.lastNameTextBox.TabIndex = 7;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager.UpdateOrder = fullStackSQLExercise.PatClothesShopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 321);
+            this.Controls.Add(this.btnOpenForm2);
             this.Controls.Add(lastNameLabel);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(firstNameLabel);
@@ -311,12 +323,12 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.patClothesShopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingNavigator)).EndInit();
             this.customerBindingNavigator.ResumeLayout(false);
             this.customerBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patClothesShopDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,6 +360,7 @@
         private System.Windows.Forms.TextBox customerIDTextBox;
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.Button btnOpenForm2;
     }
 }
 
