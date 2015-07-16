@@ -16,5 +16,20 @@ namespace fullStackSQLExercise
         {
             InitializeComponent();
         }
+
+        private void customerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.customerBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.patClothesShopDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'patClothesShopDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.patClothesShopDataSet.Customer);
+
+        }
     }
 }
